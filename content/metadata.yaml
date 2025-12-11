@@ -3,7 +3,7 @@ title: "Værdiskabelse med AI: Nedefra og op"
 author: "Jakob Mørup Wang"
 date: "2026"
 lang: da
-documentclass: book
+documentclass: article
 papersize: a4
 geometry:
   - margin=2.5cm
