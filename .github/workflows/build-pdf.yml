@@ -14,11 +14,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Update packages
-        run: apt-get update
-        
-      - name: Install Git
-        run: apt-get install --no-cache git
+      - name: Install dependencies
+        run: |
+          apt-get update
+          apt-get install -y git fonts-source-sans-pro fontconfig
+          fc-cache -fv
       
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -28,11 +28,6 @@ jobs:
       - name: Fix Git ownership
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
-
-      - name: Install Source Sans Pro font
-        run: |
-          apt-get install -y fonts-source-sans-pro fontconfig
-          fc-cache -fv
       
       - name: Build PDF
         run: |
