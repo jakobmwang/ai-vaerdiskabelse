@@ -17,7 +17,7 @@ jobs:
       - name: Install dependencies
         run: |
           apt-get update
-          apt-get install -y git fonts-source-sans-pro fontconfig
+          apt-get install -y git fonts-open-sans fontconfig
           fc-cache -fv
       
       - name: Checkout repository
