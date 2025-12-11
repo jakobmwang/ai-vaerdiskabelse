@@ -10,11 +10,12 @@ geometry:
 mainfont: "Open Sans"
 sansfont: "Open Sans"
 fontsize: 12pt
+linestretch: 1.15
 toc: true
 toc-depth: 2
 numbersections: true
 links-as-notes: false
 colorlinks: true
-linkcolor: blue
-urlcolor: blue
+linkcolor: gray
+urlcolor: gray
 ---
