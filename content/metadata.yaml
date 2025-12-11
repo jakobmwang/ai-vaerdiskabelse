@@ -7,7 +7,7 @@ documentclass: book
 papersize: a4
 geometry:
   - margin=2.5cm
-mainfont: "Source Sans Pro"
+mainfont: sans-serif
 fontsize: 12pt
 toc: true
 toc-depth: 2
