@@ -7,6 +7,7 @@ documentclass: book
 papersize: a4
 geometry:
   - margin=2.5cm
+mainfont: "TeX Gyre Heros"
 fontsize: 12pt
 toc: true
 toc-depth: 2
