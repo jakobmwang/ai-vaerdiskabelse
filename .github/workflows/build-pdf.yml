@@ -10,7 +10,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: pandoc/latex:latest
+      image: pandoc/extra:latest
     permissions:
       contents: write
     steps:
@@ -33,6 +33,7 @@ jobs:
             --from markdown \
             --pdf-engine=xelatex \
             --metadata-file=content/metadata.yaml \
+            --resource-path=content \
             -o Vaerdiskabelse-med-AI.pdf
       
       - name: Commit PDF to repository
