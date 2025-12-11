@@ -1,0 +1,18 @@
+---
+title: "Værdiskabelse med AI: Nedefra og op"
+author: "Jakob Mørup Wang"
+date: "2026"
+lang: da
+documentclass: book
+papersize: a4
+geometry:
+  - margin=2.5cm
+fontsize: 12pt
+toc: true
+toc-depth: 2
+numbersections: true
+links-as-notes: false
+colorlinks: true
+linkcolor: blue
+urlcolor: blue
+---
