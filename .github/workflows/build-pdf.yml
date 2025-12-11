@@ -5,9 +5,12 @@ on:
     paths:
       - 'content/**'
   workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    container:
+      image: pandoc/latex:latest
     permissions:
       contents: write
     steps:
@@ -16,18 +19,13 @@ jobs:
         with:
           fetch-depth: 0
       
-      - name: Install pandoc and LaTeX
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y pandoc texlive texlive-latex-extra texlive-fonts-recommended
-      
       - name: Build PDF
         run: |
           pandoc \
             content/*.md \
             --from markdown \
             --pdf-engine=xelatex \
-            --metadata-file=content/metadata.yaml \  # <-- ændret sti
+            --metadata-file=content/metadata.yaml \
             -o Vaerdiskabelse-med-AI.pdf
       
       - name: Commit PDF to repository
